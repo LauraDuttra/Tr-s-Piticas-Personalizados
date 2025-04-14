@@ -1,0 +1,195 @@
+/* Cores */
+:root {
+    --rosa-escuro: #953e2b;
+    --rosa-claro: #fa8ca7;
+    --fundo-claro: #fef8f4;
+    --preto: #000;
+}
+@font-face{
+    font-family: 'tan-mon-cheri';
+    src: url(fonts/tan-mon-cheri.woff2) format('woff2'),
+         url(fonts/tan-mon-cheri.woff) format('woff');
+}
+
+.cinzel-decorative-regular {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .cinzel-decorative-bold {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .cinzel-decorative-black {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:'tan-mon-cheri', sans-serif;
+    background-color: var(--fundo-claro);
+    color: var(--preto);
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--rosa-escuro);
+    color: var(--fundo-claro);
+    text-align: center;
+    padding: 2rem 1rem;
+    font-family:'tan-mon-cheri', sans-serif;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Main */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.fonte {
+    font-family: "Cinzel Decorative", serif;
+}
+
+h2 {
+    color: var(--rosa-escuro);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+ul li {
+    background: var(--rosa-claro);
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* Contato */
+#contato p {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+a {
+    color: var(--rosa-escuro);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background: var(--rosa-escuro);
+    color:var(--fundo-claro);
+    padding: 1rem;
+}
+
+.titulo{
+    font-family:'tan-mon-cheri', sans-serif;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    ul {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    ul li {
+        font-size: 0.95rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--preto);
+}
+
+.modal-content {
+    background-color: var(--fundo-claro);
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.close {
+    color: var(--fundo-claro);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: var(--rosa-escuro);
+}
